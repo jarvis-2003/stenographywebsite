@@ -1,0 +1,110 @@
+<h1 class = "title-text">Stneography : The Art of Hiding Message</h1>
+
+<div class = "home-main-container">
+
+<div class = "h-out-cont">
+    <div class = "about-us">
+
+    </div>
+    <div class = "about-us-text">
+        <h3>A<span>bou</span>t</h3>
+        <p>
+            Steganography is the practice of hiding information within other, seemingly innocuous data, such as images, audio files, or text. The primary goal is to conceal the existence of the hidden message, making it difficult for unauthorized parties to detect. In image steganography, for example, text or data is embedded within the pixels of an image, often by subtly altering the color values. The hidden data can only be extracted by someone who knows how to access it. Steganography differs from encryption in that its focus is on making the message undetectable, rather than unreadable without a key.
+        </p>
+    </div>
+</div>
+
+<h2 class = "headingNo-1">
+    Start E<span>ncrpytin</span>g Here
+</h2>
+<p>
+    Encrypting is the process in which the message is embedded inside the image by using some methods. <br> In my case i have use some cryptographical Techniques which is easy to crack. This is a test or a prototype that shows how an Stneography works. In this Appliction i am using my own made API which is already hosted. So to the Developer Here I will Provide my api and endpoints with proper documentation.
+    Now coming To use , This is just an frontend for that api developed in ruby on rails which is handling the API interaction in Backend
+
+    <h6>Steps To Use This</h6>
+
+    <span style = "color:red;">Note*: </span>Please use this in a Ethical way which should not harm anyone.Improper use of this may lead to bad consequences.
+    <br>
+    <br>
+
+    <ul>
+        <li> Step 1: Open the Encrypt tab under the menu or Below Provide the link click to get redirected.</li> <br>
+        <li> Step 2: You will see a form there which do have 2 field one is text field and other is a file field.</li>
+        <details>
+            <summary>Click to see more details</summary>
+            <p>
+                Note that Longer the Text You Input the more distorted image you will get in output. <br>
+                Some protocols for uploading file i.e <br>
+                <ul>
+                    <li>it must be under 5 mb size</li>
+                    <li>it must be an PNG image for now further i will also handle other file also</li>
+                    <li>file shouldn't contain any malware or anything because it is opened in a server</li>
+                </ul>
+            </p>
+        </details>
+        <li> Step 3: After filling Up the form Just <span style = "color:red;">Press Enter Only Once</span> and wait for some time the output image with the embedded text will automatically download</li> <br>
+
+        <li>
+            Step 4: Save the output image on Your device local files. The name of the file would be "output_image.png" ,You can just rename it.
+        </li> <br>
+
+
+        <li>Step 5: Don't loose the Original picture because it is the Key to Your Output picture.</li> <br>
+
+        <li>Step 6: Send to your friend whom You want to give the message in Wattsapp or any Social media and also give him the key i.e the Orginal Image.</li>
+    </ul>
+</p>
+<div style="display:flex; justify-content:center; margin-top:2rem; margin-bottom:2rem;">
+    <%=link_to "Start Encrypting", encrypt_path , class: "encrypt-button"%>
+</div>
+
+
+<h2 class="headingNo-1">
+    Fun De<span>crtypi</span>ng Here
+</h2>
+<p>
+    Decrypting is the process of extracting the hidden message from an image using a specific method. In this case, I have employed simple cryptographic techniques, making it easy to retrieve the embedded message. This is part of the prototype to demonstrate how steganography works. <br>
+
+    For decryption, the same API that was used for encryption will be utilized. The API ensures the decoding process is accurate and efficient. Just like the encryption functionality, this frontend interacts with the hosted API through the backend developed in Ruby on Rails. <br>
+
+    Important Note: Always use this ethically and responsibly. Misusing the decryption feature could have serious consequences, as the hidden   messages might contain sensitive or private information. <br>
+
+    Keep in mind that the decryption process requires the original image used during encryption. This original image acts as the "key" to reveal the hidden message from the encoded output image. Without the key, the decryption process will fail, ensuring the security of the embedded information <br>
+
+    Happy Deryption ! <br>
+
+    <h6>Steps To Use This</h6>
+
+    <span style = "color:red;">Note*: </span>Please use this in a Ethical way which should not harm anyone.Improper use of this may lead to bad consequences.
+    <br>
+    <br>
+
+    <ul>
+        <li> Step 1: Open the Decrypt tab under the menu or Below Provide the link click to get redirected.</li> <br>
+        <li> Step 2: You will see a form there which do have 2 field Both are file field</li>
+        <details>
+            <summary>Click to see more details</summary>
+            <p>
+                Note that upload the output image in the output field and original image in the original <br>
+                Some protocols for uploading file i.e <br>
+                <ul>
+                    <li>it must be under 5 mb size</li>
+                    <li>it must be an PNG image for now further i will also handle other file also</li>
+                    <li>file shouldn't contain any malware or anything because it is opened in a server</li>
+                </ul>
+            </p>
+        </details>
+        <li> Step 3: You have your image that is sent by someone or your friend and with that another image i.e the original image, In order to Decrypt You must have the two images the output and the original image .</li> <br>
+        <li>
+            Step 4: Then hit the "Decrypt" button in some sought of time you will get your required text Don't hit the Decrpt button multiple times
+        </li> <br>
+
+
+        <li>Step 5: Get the text back and then you can also do the same encrypt and send some message. </li> <br>
+    </ul>
+</p>
+
+<div style="display:flex; justify-content:center; margin-top:2rem; margin-bottom:2rem;">
+    <%=link_to "Start Decrypting", decrypt_path , class: "encrypt-button"%>
+</div>
+</div>

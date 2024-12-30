@@ -1,0 +1,51 @@
+<%if flash[:notice]%>
+<div class="alert alert-info" role="alert">
+<span><%= flash[:notice]%></span>
+</div>
+<%end%> 
+
+<div class="d-flex justify-content-center align-items-center" style ="height:90vh;">
+
+<div class="outer-con-animation">
+<%= image_tag "hacker.png", width: "100px", height: "100px",class: "image-animation" %>
+</div>
+
+<%=form_with url: decrypt_path ,html: {style: "padding:60px; border:1px solid rgba(21, 10, 10, 0.9); box-shadow: 7px 6px 8px rgba(44, 36, 36, 0.8); background-color: white;"} ,data: {turbo:false} do |form|%>
+<h2 class="text-center" style="margin-bottom:30px;">Decrypt It</h2>
+
+<div class = "mb-3">
+<label for="image">Upload Your original image file.</label>
+<%=form.file_field :imageOg , class:"form-control",accept: "image/png", id:"image-upload" %>
+</div>
+
+<div class = "mb-3">
+<label for="image">Upload Your output image file.</label>
+<%=form.file_field :imageOu , class:"form-control",accept: "image/png", id:"image-upload" %>
+</div>
+
+<span id="error-message"></span>
+<center><%=form.submit "Decrypt",class:"btn btn-primary button-animate"%></center>
+<%end%>
+</div>
+
+
+<script>
+ document.addEventListener("DOMContentLoaded", function () {
+  const fileInput = document.getElementById("image-upload");
+  const errorMessage = document.getElementById("error-message");
+
+  fileInput.addEventListener("change", function () {
+    errorMessage.textContent = ""; // Clear any existing error message
+
+    if (fileInput.files.length > 0) {
+      const file = fileInput.files[0];
+
+      // Check if the file size exceeds 3 MB
+      if (file.size > 3 * 1024 * 1024) { // 3 MB in bytes
+        errorMessage.textContent = "File size must be less than 3 MB.";
+        fileInput.value = ""; // Reset the file input
+      }
+    }
+  });
+});
+</script>

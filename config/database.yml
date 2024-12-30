@@ -1,0 +1,16 @@
+default: &default
+  adapter: sqlite3
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+
+development:
+  <<: *default
+  database: ":memory:"  # In-memory database (temporary)
+
+test:
+  <<: *default
+  database: ":memory:"  # In-memory database (temporary)
+
+production:
+  <<: *default
+  database: ":memory:"  # In-memory database (temporary)

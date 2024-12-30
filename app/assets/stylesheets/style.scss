@@ -1,0 +1,150 @@
+.home-main-container{
+  margin:50px 50px;
+
+}
+
+.image-animation{
+    position: absolute;
+    z-index:-12;
+}
+
+#submit-encryption:disabled{
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.outer-con-animation{
+    height:200px;
+    width:200px ;
+    position: absolute;
+    top:113px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.output-area{
+    font-size: 20px;
+    padding: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.out-con{
+    height:90vh;
+    
+}
+
+.title-text{
+    text-align: center;
+    font-family: "Playwrite AU SA Guides", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2rem; /* Adjust size as needed */
+    line-height: 1.5; /* Adds spacing between lines */
+    word-wrap: break-word;
+    margin:10px;
+}
+
+@media (max-width: 600px) {
+    .title-text {
+      font-size: 1.5rem; /* Reduce font size for smaller screens */
+    }
+  }
+
+  .h-out-cont{
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    margin-top:3rem;
+    margin-bottom: 3rem;
+  }
+
+  .about-us{
+    // height:100%;
+    width: 300px;
+    background-image: url(asset_path('about-us.jpg'));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: aquamarine;
+    // position: relative;
+    // left:-30px;
+  }
+  .about-us-text > p {
+    width: 80%; /* Makes the width 80% of the parent container */
+    max-width: 600px; /* Prevents it from growing too wide on large screens */
+    margin: 0 auto; /* Centers the paragraph */
+  }
+
+  .about-us-text > h3 {
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+  }
+
+  .headingNo-1{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 25px;
+    
+  }
+
+  .headingNo-1 > span{
+    border-bottom:2px solid black;
+    padding-bottom:2px;
+
+  }
+
+  .about-us-text > h3 >span{
+    border-bottom:2px solid black;
+  }
+  @media only screen and (max-width: 911px) {
+    .h-out-cont{
+      flex-direction: column;
+    }
+    .about-us{
+      height:300px;
+      width:90%;
+    }
+    .h-out-cont{
+      align-items: center;
+    }
+    .about-us-text{
+      margin-top:30px;
+    }
+    .about-us-text > p{
+      width:100%;
+      max-width:fit-content ;
+    }
+    .about-us-text > h3 {
+      text-align:left;
+    }
+  }
+
+  details {
+    font-family: Arial, sans-serif;
+    margin: 10px 0;
+  }
+  summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #007bff;
+  }
+  details[open] summary {
+    color: #0056b3; /* Change color when opened */
+  }
+
+  .encrypt-button{
+    padding:15px;
+    border-radius:27px;
+    border:2px solid rgb(190, 28, 144);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: #ff00a6;
+    font-size:18px;
+    font-weight: 800;
+  }
+  .encrypt-button:hover{
+    border:2px solid rgb(190, 28, 144);
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    background-color: rgb(190, 28, 144);
+  }
